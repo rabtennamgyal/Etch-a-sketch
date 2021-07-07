@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    background: linear-gradient(to right, #5dd1ff, #6dc4ff);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+    margin: 0 auto;
+    height: 100vh;
+    width: 70vw;
+    background: linear-gradient(to right, #9fe4ff, #a8d2ee);
+}
+
+.container .title {
+    display: grid;
+    place-items: center;
+}
+
+.container .title button {
+    cursor: pointer;
+    border: none;
+    border-radius: 2rem;
+    height: 7rem;
+    width: 15rem;
+    font-size: 3rem;
+    font-family: cursive;
+    color: #000;
+}
+
+.container .title button:hover {
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+
+.container .title button:active {
+    transform: scale(.99);
+    transition: 0.7s;
+}
+
+.container .content {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    margin: 1rem;
+    width: 70%;
+}
+
+.container .content .styleBox {
+    border: .1rem solid;
+    cursor: pointer;
+}
+
+.container .content .styleBox:hover {
+    background: red;
+}
